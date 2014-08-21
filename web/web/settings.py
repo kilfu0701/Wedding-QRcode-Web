@@ -1,4 +1,10 @@
 # Django settings for web project.
+from os.path import join, abspath, dirname
+from local_settings import *
+
+here = lambda *x: join(abspath(dirname(__file__)), *x)
+PROJECT_ROOT = here("..")
+root = lambda *x: join(abspath(PROJECT_ROOT), *x)
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -9,18 +15,6 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '',                      # Or path to database file if using sqlite3.
-        # The following settings are not used with sqlite3:
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-        'PORT': '',                      # Set to empty string for default.
-    }
-}
-
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = []
@@ -29,7 +23,7 @@ ALLOWED_HOSTS = []
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
 # In a Windows environment this must be set to your system time zone.
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'Asia/Taipei'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -83,7 +77,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '-du=h571^3rf-$g$hp+9$ig6t(qp_rjk)f4y&=rbai=+(-%9i!'
+#SECRET_KEY = '-du=h571^3rf-$g$hp+9$ig6t(qp_rjk)f4y&=rbai=+(-%9i!'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -124,6 +118,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+    'rest_framework',
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'

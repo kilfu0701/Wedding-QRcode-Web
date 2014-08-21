@@ -3,6 +3,12 @@
 .AppleDouble
 .LSOverride
 
+## in django files
+local_settings.py
+
+
+
+
 # Icon must end with two \r
 Icon
 

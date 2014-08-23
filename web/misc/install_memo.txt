@@ -1,17 +1,26 @@
-## INSTALL dependency libs & packages.
+### INSTALL dependency libs & packages.
 # http://www.django-rest-framework.org/#installation
 # install rest framework
 pip install djangorestframework
-pip install markdown        # Markdown support for the browsable API.
-pip install django-filter   # Filtering support
 
-## write a local_setting.py in 'THKWebDjango' directory.
+# Markdown support for the browsable API.
+pip install markdown
+
+# Filtering support
+pip install django-filter
+
+# install qrcode
+https://pypi.python.org/pypi/qrcode
+
+
+### write a local_setting.py in 'THKWebDjango' directory.
 cd THKWebDjango/
 cp local_settings.sample.py local_settings.py
 
-## DB setups.
+
+### DB setups.
 # use mySQL
 mysql -uXXX -pYYY
-create database thk_web_django;
+create database wedding_qrcode;
 
 

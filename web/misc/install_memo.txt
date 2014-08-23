@@ -11,7 +11,7 @@ pip install django-filter
 
 # install qrcode
 https://pypi.python.org/pypi/qrcode
-
+pip install Pillow
 
 ### write a local_setting.py in 'THKWebDjango' directory.
 cd THKWebDjango/

@@ -22,14 +22,29 @@ pip install django-filter
 https://pypi.python.org/pypi/qrcode
 pip install Pillow
 
+# [install] mod_wsgi
+cd ~/src/
+wget https://modwsgi.googlecode.com/files/mod_wsgi-3.4.tar.gz
+tar zxvf mod_wsgi-3.4.tar.gz
+cd mod_wsgi-3.4
+./configure  --with-python=/opt/python2.7.8/bin/python
+make
+make install
+# enable modules in apache
+cd /etc/apache2/mods-enabled
+ln -s ../mods-available/wsgi.conf
+ln -s ../mods-available/wsgi.load
+
 
 ### Django configure ###
 # write a local_setting.py in 'THKWebDjango' directory.
 cd THKWebDjango/
 cp local_settings.sample.py local_settings.py
+
 # set .python-eggs folder
 vim .../web/wsgi.py
->> os.environ['PYTHON_EGG_CACHE'] = '/home/.python-eggs'
+#os.environ['PYTHON_EGG_CACHE'] = '/home/.python-eggs'
+
 chmod 700 -R /home/.python-eggs
 chown -R www-data:www-data /home/.python-eggs
 

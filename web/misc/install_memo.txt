@@ -30,7 +30,8 @@ cp local_settings.sample.py local_settings.py
 # set .python-eggs folder
 vim .../web/wsgi.py
 >> os.environ['PYTHON_EGG_CACHE'] = '/home/.python-eggs'
-chmod 777 -R /home/.python-eggs
+chmod 700 -R /home/.python-eggs
+chown -R www-data:www-data /home/.python-eggs
 
 
 ### DB setups.

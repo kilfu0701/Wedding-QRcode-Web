@@ -5,7 +5,8 @@
 
 ## in django files
 local_settings.py
-
+web/misc/wed_dev.conf
+web/misc/wed_prod.conf
 
 
 

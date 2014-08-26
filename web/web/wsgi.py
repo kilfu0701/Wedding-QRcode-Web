@@ -33,3 +33,16 @@ application = get_wsgi_application()
 # Apply WSGI middleware here.
 # from helloworld.wsgi import HelloWorldApplication
 # application = HelloWorldApplication(application)
+"""
+paths = [
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+]
+
+def application(environ, start_response):
+    if environ['mod_wsgi.process_group'] != '':
+        import signal, os
+        os.kill(os.getpid(), signal.SIGINT)
+
+    environ['PATH_INFO'] = environ['SCRIPT_NAME'] + environ['PATH_INFO']
+    return _application(environ, start_response)
+"""

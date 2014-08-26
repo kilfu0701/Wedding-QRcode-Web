@@ -54,4 +54,5 @@ chown -R www-data:www-data /home/.python-eggs
 mysql -uXXX -pYYY
 create database wedding_qrcode;
 
-
+python manage.py syncdb
+python manage.py collectstatic

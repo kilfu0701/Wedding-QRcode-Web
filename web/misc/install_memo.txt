@@ -1,21 +1,36 @@
-### INSTALL dependency libs & packages.
+### INSTALL dependency libs & packages. ###
+pip install django
+
+# [install] MySQLdb
+# https://pypi.python.org/pypi/MySQL-python/1.2.5
+wget --no-check-certificate https://pypi.python.org/packages/source/M/MySQL-python/MySQL-python-1.2.5.zip#md5=654f75b302db6ed8dc5a898c625e030c -O "MySQL-python-1.2.5.zip"
+unzip MySQL-python-1.2.5.zip
+cd MySQL-python-1.2.5/
+python2.7.8 setup.py install
+
 # http://www.django-rest-framework.org/#installation
-# install rest framework
+# [install] rest framework
 pip install djangorestframework
 
-# Markdown support for the browsable API.
+# [install] Markdown support for the browsable API.
 pip install markdown
 
-# Filtering support
+# [install] Filtering support
 pip install django-filter
 
-# install qrcode
+# [install] qrcode
 https://pypi.python.org/pypi/qrcode
 pip install Pillow
 
-### write a local_setting.py in 'THKWebDjango' directory.
+
+### Django configure ###
+# write a local_setting.py in 'THKWebDjango' directory.
 cd THKWebDjango/
 cp local_settings.sample.py local_settings.py
+# set .python-eggs folder
+vim .../web/wsgi.py
+>> os.environ['PYTHON_EGG_CACHE'] = '/home/.python-eggs'
+chmod 777 -R /home/.python-eggs
 
 
 ### DB setups.

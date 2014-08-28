@@ -20,8 +20,9 @@ class People(models.Model):
 
     ## override
     def save(self, *args, **kwargs):
-        if not self.qrcode_sha256:
-            self.qrcode_sha256 = secure.generate_sha256()
+        if not self.pk:
+            if not self.qrcode_sha256:
+                self.qrcode_sha256 = secure.generate_sha256()
 
         super(People, self).save(*args, **kwargs)
 

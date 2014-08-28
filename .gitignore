@@ -7,7 +7,7 @@
 local_settings.py
 web/misc/wed_dev.conf
 web/misc/wed_prod.conf
-
+web/logs/*.log
 
 
 # Icon must end with two \r

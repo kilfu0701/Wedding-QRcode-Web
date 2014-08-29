@@ -11,7 +11,7 @@ Quick Startup
   2. Modify the file and SET your own **SECRET_KEY**
   3. Initialize DB with `python manage.py syncdb`
   4. Start Server `python manage.py runserver`
-  5. Try access [http://127.0.0.1/](http://127.0.0.1)
+  5. Try access [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
 - Run in **Apache2**:
   1. ...

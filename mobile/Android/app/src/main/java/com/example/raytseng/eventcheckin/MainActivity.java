@@ -60,7 +60,7 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View view) {
                 // TODO -- start qrcode scan activity
-
+                // Test
 
             }
         });

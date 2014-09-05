@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.raytseng.eventcheckin.search.ui.SearchNameActivity">
+
+    <ImageView
+        android:id="@+id/main_img_view"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/background"
+        />
+
+    <RadioGroup
+        android:id="@+id/rad_group_b_or_g"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/main_img_view"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rad_btn_boy"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="@string/boys_friends"
+            android:layout_marginLeft="40dp"
+            android:checked="true"
+            />
+
+        <RadioButton
+            android:id="@+id/rad_btn_girl"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="@string/girls_friends"
+            android:layout_marginLeft="40dp"
+            />
+
+    </RadioGroup>
+
+
+    <LinearLayout
+        android:id="@+id/layout_input_text"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/rad_group_b_or_g"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:id="@+id/tv_guest_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/guest_name"
+            android:paddingLeft="10dp"
+            android:paddingRight="0dp"
+            android:layout_gravity="center"
+            />
+
+        <EditText
+            android:id="@+id/ed_guest_name_input"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:hint="請輸入來賓姓名"
+            android:paddingLeft="10dp"
+            android:paddingRight="0dp"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_search_on_server"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/layout_input_text"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/search_on_server"/>
+
+</RelativeLayout>

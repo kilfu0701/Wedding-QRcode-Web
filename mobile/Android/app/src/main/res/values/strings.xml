@@ -4,5 +4,14 @@
     <string name="app_name">EventCheckIn</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="main_feature">Happy Wedding</string>
+    <string name="search_by_name">Search Name</string>
+    <string name="search_by_qrcode">Scan QRcode</string>
+    <string name="b_g_freinds">親友</string>
+    <string name="boys_friends">男方親友</string>
+    <string name="girls_friends">女方親友</string>
+    <string name="guest_name">來賓姓名: </string>
+    <string name="search_on_server">搜尋</string>
+    <string name="title_activity_search_name">SearchNameActivity</string>
 
 </resources>

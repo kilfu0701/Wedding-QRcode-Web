@@ -2,13 +2,14 @@ package com.example.raytseng.eventcheckin.search.connect;
 
 /**
  * Created by raytseng on 8/29/14.
+ * This class is used for communicate with api server
  */
 public class ServerConnectManager {
 
 
     private final String TAG = "ServerConnectManager";
 
-    private static ServerConnectManager mServerConnectManager;
+    private static ServerConnectManager mServerConnectManager = null;
     public ServerConnectCallback serverConnectCallback;
 
 
@@ -27,11 +28,26 @@ public class ServerConnectManager {
     }
 
 
-
-    public ServerConnectManager() {
-
+    private ServerConnectManager() {
 
     }
+
+
+    /**
+     * ServerConnectManager is a singleton instance
+     * User can only access server by this method
+     *
+     * */
+    public static ServerConnectManager getManagerInstance() {
+        if (mServerConnectManager == null) {
+            mServerConnectManager = new ServerConnectManager();
+        }
+
+        return mServerConnectManager;
+
+    }
+
+
 
     /**
      * search guest by name and friend type

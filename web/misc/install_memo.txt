@@ -56,3 +56,8 @@ create database wedding_qrcode;
 
 python manage.py syncdb
 python manage.py collectstatic
+
+
+
+### 
+pip install -r requirements.txt --allow-all-external

@@ -1,5 +1,10 @@
 package com.example.raytseng.eventcheckin.search.connect;
 
+import android.util.Log;
+
+import java.util.Timer;
+import java.util.TimerTask;
+
 /**
  * Created by raytseng on 8/29/14.
  * This class is used for communicate with api server
@@ -12,13 +17,18 @@ public class ServerConnectManager {
     private static ServerConnectManager mServerConnectManager = null;
     public ServerConnectCallback serverConnectCallback;
 
+    // For testing
+    private Timer myTestTimer;
+    private TimerTask task;
+    private int tSec = 0;
+
 
     /**
      * callback function for update UI
      * to make user know if search process is success or fail
      * */
     public interface ServerConnectCallback {
-        public void searchSuccess();
+        public void searchSuccess(String info);
         public void searchTimeout();
         public void searchFail();
 
@@ -29,6 +39,13 @@ public class ServerConnectManager {
 
 
     private ServerConnectManager() {
+
+    }
+
+    // For testing
+    private void stopTimer() {
+        myTestTimer.cancel();
+        serverConnectCallback.searchSuccess("YO-MAN");
 
     }
 
@@ -53,6 +70,26 @@ public class ServerConnectManager {
      * search guest by name and friend type
      * */
     public boolean searchByNameAndType(int friendType, String guestName) {
+
+        Log.i(TAG, "FriendType: " + friendType + " Guest Name: " + guestName);
+
+        // For testing
+        myTestTimer = new Timer();
+        task = new TimerTask(){
+
+            @Override
+            public void run() {
+                // TODO Auto-generated method stub
+                if (tSec < 10){
+                    tSec++;
+
+                } else {
+                    stopTimer();
+                }
+            }
+
+        };
+        myTestTimer.schedule(task, 0,1000);
 
         return true;
     }

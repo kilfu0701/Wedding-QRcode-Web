@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.raytseng.eventcheckin.search.ui.ScanningActivity;
 import com.example.raytseng.eventcheckin.search.ui.SearchNameActivity;
 
 public class MainActivity extends ActionBarActivity {
@@ -60,7 +61,10 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View view) {
                 // TODO -- start qrcode scan activity
-                // Test
+                // start scanning activity
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, ScanningActivity.class);
+                startActivity(intent);
 
             }
         });

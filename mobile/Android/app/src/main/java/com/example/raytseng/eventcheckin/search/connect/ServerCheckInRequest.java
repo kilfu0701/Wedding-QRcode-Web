@@ -1,5 +1,10 @@
 package com.example.raytseng.eventcheckin.search.connect;
 
+import android.util.Log;
+
+import java.util.Timer;
+import java.util.TimerTask;
+
 /**
  * Created by raytseng on 9/11/14.
  */

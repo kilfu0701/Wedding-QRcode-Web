@@ -12,6 +12,8 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.example.raytseng.eventcheckin.search.connect.ServerSearchRequest;
+import com.example.raytseng.eventcheckin.search.connect.ServerCheckInRequest;
 import com.example.raytseng.eventcheckin.R;
 
 public class SearchNameActivity extends ActionBarActivity {

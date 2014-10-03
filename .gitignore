@@ -10,6 +10,7 @@ web/misc/wed_prod.conf
 web/logs/*.log
 web/_data/*
 web/cron/log
+web/cron/output/*
 !.empty
 
 

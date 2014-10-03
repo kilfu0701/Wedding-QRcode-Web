@@ -9,7 +9,10 @@ web/misc/wed_dev.conf
 web/misc/wed_prod.conf
 web/logs/*.log
 web/_data/*
+web/cron/log
 !.empty
+
+
 
 # Icon must end with two \r
 Icon

@@ -13,5 +13,6 @@
     <string name="guest_name">來賓姓名: </string>
     <string name="search_on_server">搜尋</string>
     <string name="title_activity_search_name">SearchNameActivity</string>
+    <string name="title_activity_scanning">ScanningActivity</string>
 
 </resources>
